@@ -14,6 +14,8 @@
 		55C4B5DE1DDB8A3700F8F367 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C4B5DC1DDB8A3700F8F367 /* LaunchScreen.storyboard */; };
 		55C4B5E91DDB8A3700F8F367 /* ayannacolden_pset3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C4B5E81DDB8A3700F8F367 /* ayannacolden_pset3Tests.swift */; };
 		55C4B5F41DDB8A3700F8F367 /* ayannacolden_pset3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C4B5F31DDB8A3700F8F367 /* ayannacolden_pset3UITests.swift */; };
+		55C4B6021DDB96EE00F8F367 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C4B6011DDB96EE00F8F367 /* DescriptionCell.swift */; };
+		55C4B6041DDCE5A700F8F367 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C4B6031DDCE5A700F8F367 /* MovieViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		55C4B5EF1DDB8A3700F8F367 /* ayannacolden-pset3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ayannacolden-pset3UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C4B5F31DDB8A3700F8F367 /* ayannacolden_pset3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ayannacolden_pset3UITests.swift; sourceTree = "<group>"; };
 		55C4B5F51DDB8A3700F8F367 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55C4B6011DDB96EE00F8F367 /* DescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
+		55C4B6031DDCE5A700F8F367 /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				55C4B5D31DDB8A3700F8F367 /* AppDelegate.swift */,
 				55C4B5D51DDB8A3700F8F367 /* ViewController.swift */,
+				55C4B6011DDB96EE00F8F367 /* DescriptionCell.swift */,
+				55C4B6031DDCE5A700F8F367 /* MovieViewController.swift */,
 				55C4B5D71DDB8A3700F8F367 /* Main.storyboard */,
 				55C4B5DA1DDB8A3700F8F367 /* Assets.xcassets */,
 				55C4B5DC1DDB8A3700F8F367 /* LaunchScreen.storyboard */,
@@ -261,6 +267,8 @@
 			files = (
 				55C4B5D61DDB8A3700F8F367 /* ViewController.swift in Sources */,
 				55C4B5D41DDB8A3700F8F367 /* AppDelegate.swift in Sources */,
+				55C4B6021DDB96EE00F8F367 /* DescriptionCell.swift in Sources */,
+				55C4B6041DDCE5A700F8F367 /* MovieViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +513,7 @@
 				55C4B5FA1DDB8A3700F8F367 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		55C4B5FB1DDB8A3700F8F367 /* Build configuration list for PBXNativeTarget "ayannacolden-pset3Tests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +522,7 @@
 				55C4B5FD1DDB8A3700F8F367 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		55C4B5FE1DDB8A3700F8F367 /* Build configuration list for PBXNativeTarget "ayannacolden-pset3UITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +531,7 @@
 				55C4B6001DDB8A3700F8F367 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
