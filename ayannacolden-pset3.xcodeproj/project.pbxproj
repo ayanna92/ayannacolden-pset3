@@ -16,6 +16,8 @@
 		55C4B5F41DDB8A3700F8F367 /* ayannacolden_pset3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C4B5F31DDB8A3700F8F367 /* ayannacolden_pset3UITests.swift */; };
 		55C4B6021DDB96EE00F8F367 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C4B6011DDB96EE00F8F367 /* DescriptionCell.swift */; };
 		55C4B6041DDCE5A700F8F367 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C4B6031DDCE5A700F8F367 /* MovieViewController.swift */; };
+		55C4B6061DDF2EB600F8F367 /* WatchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C4B6051DDF2EB600F8F367 /* WatchTableViewController.swift */; };
+		55C4B6081DDF2F3100F8F367 /* WatchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C4B6071DDF2F3100F8F367 /* WatchViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		55C4B5F51DDB8A3700F8F367 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55C4B6011DDB96EE00F8F367 /* DescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
 		55C4B6031DDCE5A700F8F367 /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		55C4B6051DDF2EB600F8F367 /* WatchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchTableViewController.swift; sourceTree = "<group>"; };
+		55C4B6071DDF2F3100F8F367 /* WatchViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 				55C4B5D51DDB8A3700F8F367 /* ViewController.swift */,
 				55C4B6011DDB96EE00F8F367 /* DescriptionCell.swift */,
 				55C4B6031DDCE5A700F8F367 /* MovieViewController.swift */,
+				55C4B6051DDF2EB600F8F367 /* WatchTableViewController.swift */,
+				55C4B6071DDF2F3100F8F367 /* WatchViewCell.swift */,
 				55C4B5D71DDB8A3700F8F367 /* Main.storyboard */,
 				55C4B5DA1DDB8A3700F8F367 /* Assets.xcassets */,
 				55C4B5DC1DDB8A3700F8F367 /* LaunchScreen.storyboard */,
@@ -269,6 +275,8 @@
 				55C4B5D41DDB8A3700F8F367 /* AppDelegate.swift in Sources */,
 				55C4B6021DDB96EE00F8F367 /* DescriptionCell.swift in Sources */,
 				55C4B6041DDCE5A700F8F367 /* MovieViewController.swift in Sources */,
+				55C4B6081DDF2F3100F8F367 /* WatchViewCell.swift in Sources */,
+				55C4B6061DDF2EB600F8F367 /* WatchTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

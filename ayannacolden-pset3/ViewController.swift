@@ -101,16 +101,21 @@ class ViewController: UIViewController {
             movieView.movieTitle = movie
             movieView.moviePlot = movieDescription
             movieView.moviePoster = movieImage
-           
-            
-            
+            movieView.movieYear = moviesYear
         }
     }
+    
+ 
         
     
 }
 
 extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 120
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return 1

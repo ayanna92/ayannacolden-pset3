@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Find Movie-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ayannacolden_pset3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Find Movie" id="BYZ-38-t0r" customClass="ViewController" customModule="ayannacolden_pset3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -22,11 +22,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="KbZ-4t-2aT">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KbZ-4t-2aT">
                                 <rect key="frame" x="0.0" y="72" width="375" height="587"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKy-0b-Xq5">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="108.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
                                         <subviews>
                                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GXs-eT-pds">
                                                 <rect key="frame" x="0.0" y="8" width="375" height="44"/>
@@ -45,7 +45,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JUd-Bu-5Fw">
-                                        <rect key="frame" x="0.0" y="108.5" width="375" height="478.5"/>
+                                        <rect key="frame" x="0.0" y="109" width="375" height="478"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="150" id="3LK-kQ-x9Y" customClass="DescriptionCell" customModule="ayannacolden_pset3" customModuleProvider="target">
@@ -99,6 +99,9 @@
                                         </connections>
                                     </tableView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="FKy-0b-Xq5" secondAttribute="bottom" constant="478" id="whj-B8-7ly"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -120,10 +123,10 @@
             </objects>
             <point key="canvasLocation" x="1076" y="138.98050974512745"/>
         </scene>
-        <!--Movie View Controller-->
+        <!--Details Movie-->
         <scene sceneID="Eac-Zl-k5v">
             <objects>
-                <viewController id="Vea-tQ-Pf9" customClass="MovieViewController" customModule="ayannacolden_pset3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Details Movie" id="Vea-tQ-Pf9" customClass="MovieViewController" customModule="ayannacolden_pset3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="syw-Rc-XnV"/>
                         <viewControllerLayoutGuide type="bottom" id="OBN-Xg-C8U"/>
@@ -140,7 +143,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKh-UN-vdc">
-                                        <rect key="frame" x="192" y="82" width="175" height="263"/>
+                                        <rect key="frame" x="192" y="82" width="175" height="233"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -152,6 +155,7 @@
                                         <state key="normal" title="Add Movie"/>
                                         <connections>
                                             <action selector="addMovie:" destination="Vea-tQ-Pf9" eventType="touchUpInside" id="tTT-oX-8ha"/>
+                                            <segue destination="JOw-2R-kT6" kind="show" identifier="watchList" id="BGC-K0-sSE"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANg-rW-Lio">
@@ -184,6 +188,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b4o-HU-qve" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1884" y="138.0809595202399"/>
+        </scene>
+        <!--Watchlist-->
+        <scene sceneID="Rnz-NN-xTd">
+            <objects>
+                <tableViewController title="Watchlist" id="JOw-2R-kT6" customClass="WatchTableViewController" customModule="ayannacolden_pset3" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Aft-Jn-IGt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="watchCell" rowHeight="120" id="NwW-53-5wp" customClass="WatchViewCell" customModule="ayannacolden_pset3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NwW-53-5wp" id="G82-vo-E0V">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IFj-yG-RU4">
+                                            <rect key="frame" x="8" y="-14" width="101" height="126"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="101" id="R6z-mH-xJN"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9b-Uv-9yo">
+                                            <rect key="frame" x="117" y="8" width="132" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="132" id="Pvq-s9-TMh"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZu-nG-L7g">
+                                            <rect key="frame" x="117" y="39" width="42" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="42" id="cXU-gF-ssb"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="IFj-yG-RU4" secondAttribute="bottom" constant="-1" id="7hH-Ff-UW8"/>
+                                        <constraint firstItem="IFj-yG-RU4" firstAttribute="leading" secondItem="G82-vo-E0V" secondAttribute="leadingMargin" id="8N4-aB-rVe"/>
+                                        <constraint firstItem="IFj-yG-RU4" firstAttribute="top" secondItem="G82-vo-E0V" secondAttribute="topMargin" constant="-22" id="B7y-tt-5yJ"/>
+                                        <constraint firstItem="BZu-nG-L7g" firstAttribute="leading" secondItem="A9b-Uv-9yo" secondAttribute="leading" id="EKZ-TD-yIY"/>
+                                        <constraint firstItem="BZu-nG-L7g" firstAttribute="leading" secondItem="IFj-yG-RU4" secondAttribute="trailing" constant="8" symbolic="YES" id="VKl-7L-rJL"/>
+                                        <constraint firstItem="BZu-nG-L7g" firstAttribute="centerY" secondItem="IFj-yG-RU4" secondAttribute="centerY" id="qzL-Yw-bdy"/>
+                                        <constraint firstItem="A9b-Uv-9yo" firstAttribute="top" secondItem="G82-vo-E0V" secondAttribute="topMargin" id="z2o-qj-beC"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="moviePoster" destination="IFj-yG-RU4" id="wG0-SX-dSC"/>
+                                    <outlet property="movieTitle" destination="A9b-Uv-9yo" id="JUB-QM-Va0"/>
+                                    <outlet property="movieYear" destination="BZu-nG-L7g" id="BEA-uz-0qc"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="JOw-2R-kT6" id="bCg-dt-fQw"/>
+                            <outlet property="delegate" destination="JOw-2R-kT6" id="sbi-OL-NDv"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zEC-7T-Dvb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2712.8000000000002" y="137.18140929535232"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kxb-mA-aPK">

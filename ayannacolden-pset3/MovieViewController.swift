@@ -13,6 +13,7 @@ class MovieViewController: UIViewController {
     var moviePlot = String()
     var movieTitle = String()
     var moviePoster = String()
+    var movieYear = String()
     
     @IBOutlet weak var plotMovie: UILabel!
     @IBOutlet weak var titleMovie: UILabel!
@@ -53,6 +54,15 @@ class MovieViewController: UIViewController {
         
         // Run task
         task.resume()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "watchList") {
+            let movieView = segue.destination as! WatchTableViewController
+            movieView.movieYear = movieYear
+            movieView.movieTitle = movieTitle
+            movieView.moviePoster = moviePoster
+        }
     }
     
     @IBAction func addMovie(_ sender: Any) {
