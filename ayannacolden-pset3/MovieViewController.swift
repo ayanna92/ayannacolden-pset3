@@ -10,12 +10,21 @@ import UIKit
 
 class MovieViewController: UIViewController {
 
-    @IBOutlet weak var infoMovie: UILabel!
-    var movieJson = String()
+    var moviePlot = String()
+    var movieTitle = String()
+    var moviePoster = String()
+    
+    @IBOutlet weak var plotMovie: UILabel!
+    @IBOutlet weak var titleMovie: UILabel!
+    @IBOutlet weak var posterMovie: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        plotMovie.text = moviePlot
+        titleMovie.text = movieTitle
+        loadImageFromUrl(url: moviePoster, view: posterMovie)
+        
         // Do any additional setup after loading the view.
     }
 
@@ -24,6 +33,31 @@ class MovieViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func loadImageFromUrl(url: String, view: UIImageView){
+        
+        // Create Url from string
+        let url = NSURL(string: url)!
+        
+        // Download task:
+        // - sharedSession = global NSURLCache, NSHTTPCookieStorage and NSURLCredentialStorage objects.
+        let task = URLSession.shared.dataTask(with: url as URL) { (responseData, responseUrl, error) -> Void in
+            // if responseData is not null...
+            if let data = responseData{
+                
+                // execute in UI thread
+                DispatchQueue.main.async(execute: { () -> Void in
+                    view.image = UIImage(data: data)
+                })
+            }
+        }
+        
+        // Run task
+        task.resume()
+    }
+    
+    @IBAction func addMovie(_ sender: Any) {
+        // code to add movie to watchlist, maybe prepare segue for button?
+    }
 
     /*
     // MARK: - Navigation
