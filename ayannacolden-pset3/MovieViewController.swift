@@ -15,6 +15,8 @@ class MovieViewController: UIViewController {
     var moviePoster = String()
     var movieYear = String()
     
+    
+    
     @IBOutlet weak var plotMovie: UILabel!
     @IBOutlet weak var titleMovie: UILabel!
     @IBOutlet weak var posterMovie: UIImageView!
@@ -26,7 +28,7 @@ class MovieViewController: UIViewController {
         titleMovie.text = movieTitle
         loadImageFromUrl(url: moviePoster, view: posterMovie)
         
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,9 +67,7 @@ class MovieViewController: UIViewController {
         }
     }
     
-    @IBAction func addMovie(_ sender: Any) {
-        // code to add movie to watchlist, maybe prepare segue for button?
-    }
+    
 
     /*
     // MARK: - Navigation

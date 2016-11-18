@@ -14,11 +14,36 @@ class WatchTableViewController: UITableViewController {
     var movieTitle = String()
     var moviePoster = String()
     
+    var arrayWatchList = [String]()
+    var arrayYear = [String]()
+    var arrayImage = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.dataSource = self
         
+        // put movietitle in the watch list
+        arrayWatchList.insert(movieTitle, at: 0)
+        arrayImage.insert(moviePoster, at: 0)
+        arrayYear.insert(movieYear, at: 0)
+        
+        
+        // read from stored data
+        let defaults = UserDefaults.standard
+        if let name = defaults.stringArray(forKey: "title"){
+            print (name)
+            arrayWatchList.insert(contentsOf: name, at: 0)
+            print (arrayWatchList)
+        }
+        
+        if let year = defaults.stringArray(forKey: "year") {
+            arrayYear.insert(contentsOf: year, at: 0)
+        }
+        
+        if let image = defaults.stringArray(forKey: "image") {
+            arrayImage.insert(contentsOf: image, at: 0)
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -26,6 +51,7 @@ class WatchTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
     
     func loadImageFromUrl(url: String, view: UIImageView){
         
@@ -53,6 +79,19 @@ class WatchTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (segue.identifier == "addMovie") {
+            let defaults = UserDefaults.standard
+            defaults.set(arrayWatchList, forKey: "title")
+            defaults.set(arrayYear, forKey: "year")
+            defaults.set(arrayImage, forKey: "image")
+        }
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -62,16 +101,16 @@ class WatchTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
+        return arrayWatchList.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "watchCell", for: indexPath) as! WatchViewCell
         
-        loadImageFromUrl(url: moviePoster, view: cell.moviePoster)
         
-        cell.movieTitle.text = movieTitle
-        cell.movieYear.text = movieYear
+        cell.movieTitle.text = arrayWatchList[indexPath.row]
+        cell.movieYear.text = arrayYear[indexPath.row]
+        loadImageFromUrl(url: arrayImage[indexPath.row], view: cell.moviePoster)
 
         return cell
     }
@@ -112,14 +151,9 @@ class WatchTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+ 
 
 }

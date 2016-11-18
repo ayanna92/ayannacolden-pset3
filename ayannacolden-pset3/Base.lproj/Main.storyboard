@@ -154,7 +154,6 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Add Movie"/>
                                         <connections>
-                                            <action selector="addMovie:" destination="Vea-tQ-Pf9" eventType="touchUpInside" id="tTT-oX-8ha"/>
                                             <segue destination="JOw-2R-kT6" kind="show" identifier="watchList" id="BGC-K0-sSE"/>
                                         </connections>
                                     </button>
@@ -244,6 +243,7 @@
                                     <outlet property="moviePoster" destination="IFj-yG-RU4" id="wG0-SX-dSC"/>
                                     <outlet property="movieTitle" destination="A9b-Uv-9yo" id="JUB-QM-Va0"/>
                                     <outlet property="movieYear" destination="BZu-nG-L7g" id="BEA-uz-0qc"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="addMovie" id="DgX-EA-tzP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -276,4 +276,7 @@
             <point key="canvasLocation" x="142" y="139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="DgX-EA-tzP"/>
+    </inferredMetricsTieBreakers>
 </document>
